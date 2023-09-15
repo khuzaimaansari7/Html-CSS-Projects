@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+:root{
+    --black: #000;
+    --white: #fff;
+    --red: #db0001;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+}
+.row {
+    color: white;
+    margin-left: 20px;
+}
+.row h3{
+    color: white;
+    font-size: 50px;
+    margin-top: 120px;
+    margin-left: 440px;
+    font-weight: 500;
+}
+.row__poster {
+  
+    object-fit: contain;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+    margin-left: 20px;
+}
+  
+.row__posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+    margin-top: 30px;
+    margin-left: 250px;
+}
+  
+.row__poster:hover {
+    transform: scale(1.08);
+    border: solid white;
+}
+  
+.row__posters::-webkit-scrollbar {
+    display: none;
+}
+  
+.row__posterLarge {
+    max-height: 150px;
+    border-radius: 5px;
+}
+  
+.row__posterLarge:hover {
+    transform: scale(1.09);
+}
+
+.row .btn button{
+    border: 0.5px solid #6f6f6f;
+    background: none;
+    color: #6f6f6f;
+    font-size: 15px;
+    padding: 10px 40px;
+    margin-top: 50px;
+    margin-left: 550px;
+}
+.btn button:hover{
+    border: 0.5px solid #c9c9c9;
+    color: #c9c9c9;
+}
+
+/*---------------------meddia-queries-for-small-screens-----------------------*/
+@media only screen and (max-width: 600px){
+    .row h3{
+        font-size: 30px;
+        margin-top: 150px;
+        margin-left: 50px;
+        font-weight: 500;
+    }
+    .row__poster {
+        margin-left: 10px;
+    }
+    .row__posters {
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+    .row__posterLarge {
+        max-height: 50px;
+    }
+    .row .btn{
+        margin-left: 50px;
+    }
+    .row .btn button{
+        font-size: 11px;
+      
+        margin-top: 50px;
+        margin-left: 40px;
+    }
+    .row__poster:hover {
+        transform: scale(1.08);
+        border: solid white;
+    }
+    .row__posterLarge:hover {
+        transform: scale(1.09);
+    }
+    .btn button:hover{
+        border: 0.5px solid #c9c9c9;
+        color: #c9c9c9;
+    }
+}

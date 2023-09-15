@@ -1,0 +1,236 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,regular,italic,500,700);
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+:root{
+  --black: #000;
+  --white: #fff;
+  --red: #db0001;
+}
+body {
+  font-family: "Roboto";
+  font-size: 16px;
+}
+.header{
+  width: 100%;
+  height: fit-content;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/1.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10px 8%;
+  position: relative;
+}
+nav{
+  padding-top: 20px;
+}
+.logo{
+  width: 150px;
+  cursor: pointer;
+}
+.container {
+  position: relative;
+  display: block;
+  width: 450px;
+  margin: 50px auto;
+  padding: 60px;
+  background-color: #000000a8;
+  color: #ffffff;
+  border-radius: 4px;
+}
+.container h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+.container .form-element {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 16px;
+}
+.form-element input {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: inherit;
+  padding: 16px 20px 0 20px;
+  height: 50px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #444;
+  color: #ffffff;
+}
+.floating-label {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  top: 25%;
+  left: 20px;
+  font-size: 18px;
+  cursor: text;
+  color: #8c8c8c;
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease,
+    -webkit-transform 0.1s ease, -moz-transform 0.1s ease,
+    -o-transform 0.1s ease;
+}
+.container .btn {
+  width: 100%;
+  height: 50px;
+  margin-top: 24px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  background-color: #e50914;
+  text-decoration: none;
+}
+.container .btn a:visited{
+  color: var(--white);
+}
+.container .btn a{
+  text-decoration: none;
+  color: var(--white);
+}
+input:focus ~ .floating-label,
+input:valid ~ .floating-label {
+  font-size: 11px;
+  top: 7px;
+}
+
+.container .checkbox{
+  display: flex;
+  align-items: center;
+}
+.container .checkbox p{
+  padding-left: 130px;
+  font-size: 13px;
+  color: #8c8c8c;
+}
+.container .checkbox input{
+  width: 20px;
+}
+.container .checkbox label{
+  margin-left: 3px;
+  display: inline-flex;
+}
+
+.container .signupnow{
+  font-size: 16px;
+  color: #8c8c8c;
+  margin-top: 80px;
+  line-height: 20px;
+}
+.container .signupnow a{
+  text-decoration: none;
+  border: none;
+  background: none;
+  color: var(--white);
+  margin-left: 5px;
+}
+.container .signupnow{
+  display: inline-flex;
+  margin-top: 40px;
+}
+
+.container .captcha p{
+  font-size: 13px;
+  color: #8c8c8c;
+  margin-top: 10px;
+  line-height: 20px;
+}
+.container .recaptcha-terms-of-use--link-button{
+  text-decoration: none;
+  border: none;
+  background: none;
+  color: rgb(0, 119, 255);
+}
+
+/*---------------------FOOTER-----------------------*/
+/*
+.footer{
+  padding: 50px 10% 10px;
+  color: #777;
+  background-color: #000000a8;;
+  
+}
+.footer h2{
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.footer .col{
+  flex-basis: 25%;
+  flex-grow: 1;
+  
+}
+.footer .col a{
+  display: inline-flex;
+  text-decoration: none;
+  color: #777;
+  font-size: 14px;
+  margin: 10px;
+  
+}
+.footer .row{
+  align-items: flex-start;
+  padding: 10px 0;
+}
+*/
+
+/*---------------------meddia-queries-for-small-screens-----------------------*/
+@media only screen and (max-width: 600px){
+  .logo{
+    align-items: flex-start;
+    width: 90px;
+    height: 30px;
+  }
+  .header{
+    height: fit-content;
+  }
+  .container{
+    padding: 28px;
+    width: 100%;
+    border-radius: 4px
+  }
+  .container h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .container .form-element, .btn{
+    padding: 10px 0;
+  }
+  .container .floating-label{
+    font-size: 12px;  
+    padding: 10px 0;
+  }
+  .container .checkbox {
+    align-items: center;
+    font-size: 10px;
+  }
+  .container .checkbox input{
+    width: 20px;
+  }
+  .container .checkbox label{
+    margin-left: 3px;
+    display: inline-flex;
+  }
+  .container .checkbox p{
+    padding-left: 100px;
+  }
+  .container .signupnow{
+    display: inline-flex;
+    margin-top: 40px;
+  }
+  .container .signupnow a{
+    margin-left: 5px;
+  }
+}
